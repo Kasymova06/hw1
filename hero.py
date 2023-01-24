@@ -17,7 +17,7 @@ class SuperHero:
         return len(self.catchphrase)
 
     
-hero = SuperHero("askhat","python", "prog",100,"programmist")
+hero = SuperHero("sam","lime", "wet",111,"lighter")
 
 class NewSuper(SuperHero):
     def __init__(self, name, nickname, supername, health_points, catchphrase) -> None:
@@ -26,12 +26,12 @@ class NewSuper(SuperHero):
          self.fly = False
     def kvodrat(self):
         self.fly = True
-        return f"Квадрат: {self.health_points ** 2}, Fly: {self.fly}"
+        return f"rвадрат: {self.health_points ** 2}, Fly: {self.fly}"
     def newmetod(self):
         return f"newdamage: {self.damage}, newfly: {self.fly}"
     def flyg(self):
         return f"catchphrase: {self.catchphrase}"
-newsuper = NewSuper("askhat", "spider", "web",6,"fly in the True phrase")
+newsuper = NewSuper("zahro", "snake", "web",6,"fly in the True phrase")
 print(newsuper.kvodrat())
 print(newsuper.flyg())
 print(newsuper.newmetod())
@@ -41,5 +41,5 @@ class Villain(SuperHero):
         pass
     def crit(self,damage1,damage2):
         return f"uron: {damage1 ** damage2}"
-villain = Villain("nurbolot", "kot", "sperma",100,"sperma man")
-print(villain.crit(6,10))
+villain = Villain("sema", "fromLatoNYC", "Lenon",111,"iron man")
+print(villain.crit(8,10))
