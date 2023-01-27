@@ -1,21 +1,25 @@
-class calc:
-    def __init__(self,x,y) -> None:
-        self.x = x
-        self.y = y
-    def add(self):
+class Calculator:
+    def __init__(self, num):
+        self.num = num
+
+    def __add__(self, other):
         print("Сложение")
-        return f"{self.x + self.y}"
-    def sub(self):
+        return self.num + other.num
+
+    def __sub__(self, other):
         print("Вычитание")
-        return f"{self.x - self.y}"
-    def mul(self):
+        return self.num - other.num
+
+    def __mul__(self, other):
         print("Умножение")
-        return f"{self.x * self.y}"
-    def truediv(self):
+        return self.num * other.num
+
+    def __truediv__(self, other):
         print("Деление")
-        return f"{self.x // self.y}"
-a = calc(100,5)
-print(a.add())
-print(a.mul())
-print(a.sub())
-print(a.truediv())
+        return self.num / other.num
+a = Calculator(1500)
+b = Calculator(1240)
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
